@@ -1,0 +1,60 @@
+import type { Badge, UserData } from '../types'
+
+export const badges: Badge[] = [
+  {
+    id: 'first-step',
+    icon: '🌱',
+    name: 'First Step',
+    description: 'Complete your first mission.',
+    requirement: 'Complete 1 mission',
+    check: (data: UserData) => data.missionsCompleted.length >= 1,
+  },
+  {
+    id: 'eco-learner',
+    icon: '📚',
+    name: 'Eco Learner',
+    description: 'Complete the quiz.',
+    requirement: 'Finish the E-Waste Quiz',
+    check: (data: UserData) => data.quiz.completed,
+  },
+  {
+    id: 'recycler',
+    icon: '♻️',
+    name: 'Recycler',
+    description: 'Complete the e-waste mission.',
+    requirement: 'Bring e-waste to the collection point',
+    check: (data: UserData) => data.missionsCompleted.includes('collection-point'),
+  },
+  {
+    id: 'green-warrior',
+    icon: '🌍',
+    name: 'Green Warrior',
+    description: 'Reach 75 Eco Points.',
+    requirement: 'Reach 75 Eco Points',
+    check: (data: UserData) => data.points >= 75,
+  },
+  {
+    id: 'eco-champion',
+    icon: '🏆',
+    name: 'Eco Champion',
+    description: 'Reach 150 Eco Points.',
+    requirement: 'Reach 150 Eco Points',
+    check: (data: UserData) => data.points >= 150,
+  },
+  {
+    id: 'eco-streak',
+    icon: '🔥',
+    name: 'Eco Streak',
+    description: 'Complete 3 missions.',
+    requirement: 'Complete 3 missions',
+    check: (data: UserData) => data.missionsCompleted.length >= 3,
+  },
+  {
+    id: 'ewaste-legend',
+    icon: '👑',
+    name: 'E-Waste Legend',
+    description: 'Reach 250 Eco Points.',
+    requirement: 'Reach 250 Eco Points',
+    check: (data: UserData) => data.points >= 250,
+  },
+]

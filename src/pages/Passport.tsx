@@ -14,7 +14,7 @@ export default function Passport({ data }: PassportProps) {
 
   const milestones = [
     { label: 'Joined Campaign', done: true },
-    { label: 'Created Profile', done: !!data.profile },
+    { label: 'Created Passport', done: !!data.profile },
     { label: 'Completed Awareness Quiz', done: data.quiz.completed },
     { label: 'Earned First Badge', done: data.badgesUnlocked.length > 0 },
     { label: 'Completed Eco Mission', done: data.missionsCompleted.includes(currentMission.id) || data.missionsCompleted.length > 0 },
@@ -24,19 +24,19 @@ export default function Passport({ data }: PassportProps) {
 
   return (
     <div className="animate-fade-in">
-      <h1 className="font-display text-2xl font-bold text-forest-dark sm:text-3xl">🪪 My Scorecard</h1>
+      <h1 className="font-display text-2xl font-bold text-forest-dark sm:text-3xl">🪪 My Passport</h1>
       <p className="mt-1 text-sm text-charcoal-light">Your official digital identity for Campaign 2026.</p>
 
       <div className="mx-auto mt-6 max-w-md rounded-3xl bg-gradient-to-br from-forest to-forest-dark p-6 text-white shadow-card-lg">
         <div className="flex items-center justify-between text-xs font-semibold tracking-wide text-mint">
-          <span>E-WASTE QUIZ</span>
+          <span>E-WASTE PASSPORT</span>
           <span>CAMPAIGN 2026</span>
         </div>
         <div className="mt-6 flex items-center gap-3">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl">🎓</div>
           <div>
             <div className="font-display text-lg font-bold">{data.profile?.fullName ?? '—'}</div>
-            <div className="text-xs text-mint/80">Scorecard ID · {data.passportId}</div>
+            <div className="text-xs text-mint/80">Passport ID · {data.passportId}</div>
           </div>
         </div>
         <div className="mt-6 grid grid-cols-2 gap-3 text-sm">

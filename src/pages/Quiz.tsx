@@ -109,7 +109,7 @@ export default function Quiz({ alreadyAwarded, onFinish, onNavigate }: QuizProps
 
         <div className="mt-6 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
           <Button fullWidth onClick={() => onNavigate('passport')}>
-            Continue to Scorecard
+            Continue to Passport
           </Button>
           <Button fullWidth variant="secondary" onClick={() => onNavigate('badges')}>
             View My Badges

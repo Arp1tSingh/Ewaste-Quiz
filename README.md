@@ -1,4 +1,4 @@
-# E-Waste Quiz 🌱
+# E-Waste Passport 🌱
 
 A frontend-only gamified web app for a **College E-Waste Awareness Campaign 2026**.
 Built with **React + TypeScript + Vite + Tailwind CSS**. All data is stored in the
@@ -22,15 +22,15 @@ npm run preview
 
 ## What you can do
 
-1. Create a digital profile (or tap **Try Demo** for pre-filled sample data).
+1. Create a digital passport (or tap **Try Demo** for pre-filled sample data).
 2. Take the 10-question E-Waste Awareness Quiz and earn +20 Eco Points.
 3. Complete Eco Missions for more points.
 4. Unlock badges automatically as you hit milestones.
 5. Check your spot on the Campus Eco Leaderboard.
 6. Redeem Eco Points for rewards and get a unique reward code.
-7. View your digital Scorecard and Eco Journey.
+7. View your digital E-Waste Passport and Eco Journey.
 8. Print a Certificate of Eco Participation.
-9. Edit your profile or reset your data entirely.
+9. Edit your profile or reset your passport entirely.
 
 Refreshing the browser never loses your progress — it's all persisted to
 `localStorage` under the key `ewastePassportData`.

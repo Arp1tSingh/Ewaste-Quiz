@@ -35,7 +35,7 @@ export default function App() {
   const [toasts, setToasts] = useState<ToastMessage[]>([])
   const [confettiBurst, setConfettiBurst] = useState(0)
   const toastId = useRef(0)
-  const initialized = useRef(false)
+  const [initialized, setInitialized] = useState(false)
 
   useEffect(() => {
     const existing = getUserData()
@@ -43,7 +43,7 @@ export default function App() {
       setData(existing)
       setPage('dashboard')
     }
-    initialized.current = true
+    setInitialized(true)
   }, [])
 
   function pushToast(message: string, variant: ToastMessage['variant'] = 'success') {
@@ -147,7 +147,7 @@ export default function App() {
     pushToast('Your passport has been reset.', 'info')
   }
 
-  if (!initialized.current) return null
+  if (!initialized) return null
 
   if (page === 'landing' || !data) {
     return (

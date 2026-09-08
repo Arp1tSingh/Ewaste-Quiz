@@ -149,20 +149,20 @@ export default function App() {
 
   if (!initialized) return null
 
-  if (page === 'landing' || !data) {
-    return (
-      <>
-        <ToastContainer toasts={toasts} />
-        <Landing onStart={handleStart} />
-      </>
-    )
-  }
-
   if (page === 'setup') {
     return (
       <>
         <ToastContainer toasts={toasts} />
         <ProfileSetup onCreate={handleCreateProfile} onDemo={handleDemo} />
+      </>
+    )
+  }
+
+  if (page === 'landing' || !data) {
+    return (
+      <>
+        <ToastContainer toasts={toasts} />
+        <Landing onStart={handleStart} />
       </>
     )
   }

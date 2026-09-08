@@ -80,7 +80,7 @@ export default function App() {
     const created = createProfile(profile)
     setData(created)
     setPage('dashboard')
-    pushToast(`Welcome, ${profile.fullName.split(' ')[0]}! Your passport is ready.`)
+    pushToast(`Welcome, ${profile.fullName.split(' ')[0]}! Your profile is ready.`)
   }
 
   function handleDemo() {
@@ -144,7 +144,7 @@ export default function App() {
     clearUserData()
     setData(null)
     setPage('setup')
-    pushToast('Your passport has been reset.', 'info')
+    pushToast('Your data has been reset.', 'info')
   }
 
   if (!initialized) return null

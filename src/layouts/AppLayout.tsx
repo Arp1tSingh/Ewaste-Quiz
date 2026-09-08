@@ -9,7 +9,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { page: 'dashboard', icon: '🏠', label: 'Dashboard' },
-  { page: 'passport', icon: '🪪', label: 'My Passport' },
+  { page: 'passport', icon: '🪪', label: 'My Scorecard' },
   { page: 'quiz', icon: '🧠', label: 'E-Waste Quiz' },
   { page: 'missions', icon: '♻️', label: 'Eco Missions' },
   { page: 'badges', icon: '🏆', label: 'Badges' },
@@ -24,7 +24,7 @@ const bottomNavItems: NavItem[] = [
   { page: 'quiz', icon: '🧠', label: 'Quiz' },
   { page: 'missions', icon: '♻️', label: 'Missions' },
   { page: 'badges', icon: '🏆', label: 'Badges' },
-  { page: 'passport', icon: '🪪', label: 'Passport' },
+  { page: 'passport', icon: '🪪', label: 'Scorecard' },
 ]
 
 interface AppLayoutProps {
@@ -42,7 +42,7 @@ export default function AppLayout({ page, onNavigate, children }: AppLayoutProps
       <aside className="hidden w-64 shrink-0 flex-col border-r border-forest/10 bg-white px-5 py-6 lg:flex">
         <div className="mb-8 flex items-center gap-2 px-2">
           <span className="text-2xl">♻️</span>
-          <span className="font-display text-base font-bold tracking-tight text-forest-dark">E-WASTE PASSPORT</span>
+          <span className="font-display text-base font-bold tracking-tight text-forest-dark">E-WASTE QUIZ</span>
         </div>
         <nav className="flex flex-1 flex-col gap-1">
           {navItems.map((item) => (
@@ -70,7 +70,7 @@ export default function AppLayout({ page, onNavigate, children }: AppLayoutProps
       <div className="flex items-center justify-between border-b border-forest/10 bg-white px-4 py-3 lg:hidden">
         <div className="flex items-center gap-2">
           <span className="text-xl">♻️</span>
-          <span className="font-display text-sm font-bold text-forest-dark">E-WASTE PASSPORT</span>
+          <span className="font-display text-sm font-bold text-forest-dark">E-WASTE QUIZ</span>
         </div>
         <button
           onClick={() => setDrawerOpen(true)}

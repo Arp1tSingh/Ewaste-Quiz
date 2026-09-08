@@ -98,7 +98,7 @@ export default function Dashboard({ data, onNavigate, onCompleteCurrentMission }
         <button onClick={() => onNavigate('passport')} className="focus-ring text-left">
           <Card hover className="h-full">
             <div className="text-2xl">🪪</div>
-            <div className="mt-2 font-display text-sm font-semibold text-forest-dark">My Passport</div>
+            <div className="mt-2 font-display text-sm font-semibold text-forest-dark">My Scorecard</div>
             <p className="mt-1 text-xs text-charcoal-light">View your digital eco identity and journey.</p>
           </Card>
         </button>

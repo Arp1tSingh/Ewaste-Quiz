@@ -34,7 +34,7 @@ export default function ProfilePage({ data, onUpdate, onReset }: ProfileProps) {
   return (
     <div className="animate-fade-in">
       <h1 className="font-display text-2xl font-bold text-forest-dark sm:text-3xl">⚙️ Profile</h1>
-      <p className="mt-1 text-sm text-charcoal-light">Manage your passport details.</p>
+      <p className="mt-1 text-sm text-charcoal-light">Manage your profile details.</p>
 
       <Card className="mt-6 max-w-lg">
         {!editing ? (
@@ -95,14 +95,14 @@ export default function ProfilePage({ data, onUpdate, onReset }: ProfileProps) {
           Resetting will clear all your campaign progress and return you to profile setup.
         </p>
         <Button variant="danger" size="sm" className="mt-3" onClick={() => setConfirmReset(true)}>
-          Reset My Passport
+          Reset My Data
         </Button>
       </Card>
 
       <Modal open={confirmReset} onClose={() => setConfirmReset(false)}>
         <div className="text-center">
           <div className="text-3xl">⚠️</div>
-          <h2 className="mt-3 font-display text-lg font-bold text-forest-dark">Reset your passport?</h2>
+          <h2 className="mt-3 font-display text-lg font-bold text-forest-dark">Reset your data?</h2>
           <p className="mt-2 text-sm text-charcoal-light">
             This will permanently erase your points, badges, quiz results, and missions. This cannot be undone.
           </p>

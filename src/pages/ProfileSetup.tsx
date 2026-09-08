@@ -32,7 +32,7 @@ export default function ProfileSetup({ onCreate, onDemo }: ProfileSetupProps) {
       <div className="w-full max-w-md animate-slide-up">
         <div className="mb-6 text-center">
           <span className="text-3xl">♻️</span>
-          <h1 className="mt-3 font-display text-2xl font-bold text-forest-dark">Create Your Passport</h1>
+          <h1 className="mt-3 font-display text-2xl font-bold text-forest-dark">Setup Profile</h1>
           <p className="mt-1 text-sm text-charcoal-light">Set up your identity for the E-Waste Awareness Campaign.</p>
         </div>
         <Card>
@@ -81,7 +81,7 @@ export default function ProfileSetup({ onCreate, onDemo }: ProfileSetupProps) {
             </div>
             {error && <p className="text-xs font-medium text-red-600">{error}</p>}
             <Button type="submit" size="lg" fullWidth>
-              Create My Passport
+              Create Profile
             </Button>
           </form>
         </Card>

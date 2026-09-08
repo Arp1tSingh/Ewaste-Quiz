@@ -42,10 +42,10 @@ export default function Landing({ onStart }: LandingProps) {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
         <div className="flex items-center gap-2">
           <span className="text-2xl">♻️</span>
-          <span className="font-display text-base font-bold tracking-tight text-forest-dark">E-WASTE PASSPORT</span>
+          <span className="font-display text-base font-bold tracking-tight text-forest-dark">E-WASTE QUIZ</span>
         </div>
         <Button size="sm" onClick={onStart}>
-          Start My Passport
+          Start Quiz
         </Button>
       </header>
 
@@ -63,7 +63,7 @@ export default function Landing({ onStart }: LandingProps) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" onClick={onStart}>
-              Start My Passport
+              Start Quiz
             </Button>
             <Button size="lg" variant="secondary" onClick={() => document.getElementById('why-matters')?.scrollIntoView({ behavior: 'smooth' })}>
               Explore Campaign
@@ -78,14 +78,14 @@ export default function Landing({ onStart }: LandingProps) {
           <div className="absolute bottom-4 left-0 text-3xl opacity-30">💻</div>
           <div className="relative w-full max-w-sm rounded-3xl bg-gradient-to-br from-forest to-forest-dark p-6 text-white shadow-card-lg">
             <div className="flex items-center justify-between text-xs font-semibold tracking-wide text-mint">
-              <span>E-WASTE PASSPORT</span>
+              <span>E-WASTE QUIZ</span>
               <span>CAMPAIGN 2026</span>
             </div>
             <div className="mt-6 flex items-center gap-3">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl">🎓</div>
               <div>
                 <div className="font-display text-lg font-bold">Aditi Rao</div>
-                <div className="text-xs text-mint/80">Passport ID · EWP-4K9XQ2</div>
+                <div className="text-xs text-mint/80">Scorecard ID · EWQ-4K9XQ2</div>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3">
@@ -149,18 +149,18 @@ export default function Landing({ onStart }: LandingProps) {
         <div className="rounded-3xl bg-gradient-to-br from-forest to-forest-dark px-6 py-12 text-center text-white sm:px-12">
           <h2 className="font-display text-2xl font-bold sm:text-3xl">Ready to start your eco journey?</h2>
           <p className="mx-auto mt-3 max-w-md text-sm text-mint/80">
-            Create your digital E-Waste Passport in under a minute and start earning points today.
+            Create your digital E-Waste Profile in under a minute and start earning points today.
           </p>
           <div className="mt-6">
             <Button size="lg" variant="amber" onClick={onStart}>
-              Start My Passport
+              Start Quiz
             </Button>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-forest/10 px-5 py-6 text-center text-xs text-charcoal-light sm:px-8">
-        ♻️ E-Waste Passport · Learn. Act. Earn. Recycle. · College E-Waste Awareness Campaign 2026
+        ♻️ E-Waste Quiz · Learn. Act. Earn. Recycle. · College E-Waste Awareness Campaign 2026
       </footer>
     </div>
   )

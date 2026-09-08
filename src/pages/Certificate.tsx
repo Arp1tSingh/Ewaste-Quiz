@@ -25,7 +25,7 @@ export default function Certificate({ data }: CertificateProps) {
       >
         <div className="flex items-center justify-center gap-2 text-forest-dark">
           <span className="text-2xl">♻️</span>
-          <span className="font-display text-sm font-bold tracking-wide">E-WASTE PASSPORT</span>
+          <span className="font-display text-sm font-bold tracking-wide">E-WASTE QUIZ</span>
         </div>
         <div className="mt-6 font-display text-xl font-bold tracking-wide text-forest-dark sm:text-2xl">
           CERTIFICATE OF ECO PARTICIPATION

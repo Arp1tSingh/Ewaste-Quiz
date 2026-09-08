@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { quizQuestions } from '../data/quizData'
 import { getLevel } from '../utils/level'
 import Button from '../components/Button'
@@ -24,6 +24,15 @@ export default function Quiz({ alreadyAwarded, onFinish, onNavigate }: QuizProps
   const [showExplanation, setShowExplanation] = useState(false)
   const [answers, setAnswers] = useState<number[]>([])
   const [stage, setStage] = useState<Stage>('question')
+  const nextBtnRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (showExplanation && nextBtnRef.current) {
+      setTimeout(() => {
+        nextBtnRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }, 50)
+    }
+  }, [showExplanation])
 
   const question = quizQuestions[index]
   const isLast = index === quizQuestions.length - 1
@@ -35,7 +44,7 @@ export default function Quiz({ alreadyAwarded, onFinish, onNavigate }: QuizProps
   }
 
   function goNext() {
-    const newAnswers = [...answers, selected as number]
+    const newAnswers = [...answers, selected !== null ? selected : -1]
     setAnswers(newAnswers)
     setSelected(null)
     setShowExplanation(false)
@@ -100,7 +109,7 @@ export default function Quiz({ alreadyAwarded, onFinish, onNavigate }: QuizProps
 
         <div className="mt-6 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
           <Button fullWidth onClick={() => onNavigate('passport')}>
-            Continue to Passport
+            Continue to Scorecard
           </Button>
           <Button fullWidth variant="secondary" onClick={() => onNavigate('badges')}>
             View My Badges
@@ -162,9 +171,9 @@ export default function Quiz({ alreadyAwarded, onFinish, onNavigate }: QuizProps
           </div>
         )}
 
-        <div className="mt-6 flex justify-end">
-          <Button disabled={!showExplanation} onClick={goNext}>
-            {isLast ? 'Finish Quiz' : 'Next Question'}
+        <div className="mt-6 flex justify-end" ref={nextBtnRef}>
+          <Button variant={!showExplanation ? 'secondary' : 'primary'} onClick={goNext}>
+            {!showExplanation ? 'Skip Question' : (isLast ? 'Finish Quiz' : 'Next Question')}
           </Button>
         </div>
       </Card>
